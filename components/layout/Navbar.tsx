@@ -14,6 +14,7 @@ import {
   Newspaper,
   Grid3X3,
   Info,
+  Mail,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -25,6 +26,7 @@ const NAV_LINKS = [
   { href: "/sports", label: "Sports", icon: Grid3X3 },
   { href: "/news", label: "News", icon: Newspaper },
   { href: "/about", label: "About", icon: Info },
+  { href: "/contact", label: "Contact", icon: Mail },
 ];
 
 export default function Navbar() {
