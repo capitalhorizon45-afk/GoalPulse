@@ -1,18 +1,29 @@
 /**
  * Server-side data access for GoalPulse.
  *
- * Everything here calls the live Football-Data.org / TheSportsDB APIs
- * directly — there is no mock fallback. If a request fails, the error
- * propagates so the route's `error.tsx` boundary can surface it instead
- * of silently showing fake data.
+ * Football data is read from the live Football-Data.org API
+ * (`FOOTBALL_DATA_API_KEY`). If that API is unavailable — unconfigured,
+ * rate-limited, or erroring — every function here automatically falls
+ * back to realistic mock data (`lib/mock-data.ts`) instead of throwing,
+ * so the UI never shows an error state for something the user can't fix.
+ *
+ * Cricket, basketball, and tennis (TheSportsDB, in `lib/api/sports-db.ts`)
+ * are unaffected and keep their existing live-only behavior.
  */
 
 import {
   getLiveMatches,
+  getTodaysMatches,
   getUpcomingMatches,
   getStandings,
 } from "@/lib/api/football-data";
-import type { Match, Standing } from "@/lib/types";
+import {
+  getMockLiveMatches,
+  getMockTodaysMatches,
+  getMockUpcomingMatches,
+  getMockStandings,
+} from "@/lib/mock-data";
+import type { FootballDataMatch, Match, Standing } from "@/lib/types";
 
 /**
  * European club football seasons run roughly August through May. Before a
@@ -26,11 +37,8 @@ export function currentFootballSeasonYear(): number {
   return month >= 8 ? now.getUTCFullYear() : now.getUTCFullYear() - 1;
 }
 
-// ─── Matches ──────────────────────────────────────────────────────────────────
-
-export async function fetchLiveMatches(): Promise<Match[]> {
-  const raw = await getLiveMatches();
-  return raw.map((m) => ({
+function mapFootballMatch(m: FootballDataMatch): Match {
+  return {
     id: m.id,
     utcDate: m.utcDate,
     status: m.status,
@@ -56,37 +64,49 @@ export async function fetchLiveMatches(): Promise<Match[]> {
       code: m.competition.code,
       emblem: m.competition.emblem,
     },
-  }));
+  };
+}
+
+function logFallback(context: string, err: unknown) {
+  const message = err instanceof Error ? err.message : String(err);
+  console.warn(
+    `[football-data] ${context} unavailable, falling back to mock data: ${message}`
+  );
+}
+
+// ─── Matches ──────────────────────────────────────────────────────────────────
+
+export async function fetchLiveMatches(): Promise<Match[]> {
+  try {
+    const raw = await getLiveMatches();
+    return raw.map(mapFootballMatch);
+  } catch (err) {
+    logFallback("Live matches", err);
+    return getMockLiveMatches();
+  }
+}
+
+/** All of today's football matches (live, finished, and upcoming kickoffs). */
+export async function fetchTodaysMatches(): Promise<Match[]> {
+  try {
+    const raw = await getTodaysMatches();
+    return raw.map(mapFootballMatch);
+  } catch (err) {
+    logFallback("Today's matches", err);
+    return getMockTodaysMatches();
+  }
 }
 
 export async function fetchUpcomingMatches(
   competitionCode = "PL"
 ): Promise<Match[]> {
-  const raw = await getUpcomingMatches(competitionCode);
-  return raw.map((m) => ({
-    id: m.id,
-    utcDate: m.utcDate,
-    status: m.status,
-    homeTeam: {
-      id: m.homeTeam.id,
-      name: m.homeTeam.name,
-      shortName: m.homeTeam.shortName,
-      crest: m.homeTeam.crest,
-    },
-    awayTeam: {
-      id: m.awayTeam.id,
-      name: m.awayTeam.name,
-      shortName: m.awayTeam.shortName,
-      crest: m.awayTeam.crest,
-    },
-    score: { home: null, away: null },
-    competition: {
-      id: m.competition.id,
-      name: m.competition.name,
-      code: m.competition.code,
-      emblem: m.competition.emblem,
-    },
-  }));
+  try {
+    const raw = await getUpcomingMatches(competitionCode);
+    return raw.map(mapFootballMatch);
+  } catch (err) {
+    logFallback("Upcoming matches", err);
+    return getMockUpcomingMatches(competitionCode);
+  }
 }
 
 // ─── Standings ────────────────────────────────────────────────────────────────
@@ -96,9 +116,15 @@ export async function fetchStandings(
   competitionCode = "PL"
 ): Promise<{ table: Standing[]; season: string }> {
   const season = String(currentFootballSeasonYear());
-  const data = await getStandings(competitionCode, season);
-  if (!data) {
-    throw new Error(`Standings are not available for ${competitionCode}.`);
+  try {
+    const data = await getStandings(competitionCode, season);
+    if (!data) {
+      throw new Error(`Standings are not available for ${competitionCode}.`);
+    }
+    return { table: data.table, season: data.season };
+  } catch (err) {
+    logFallback("Standings", err);
+    const mock = getMockStandings(competitionCode);
+    return { table: mock.table, season };
   }
-  return { table: data.table, season: data.season };
 }

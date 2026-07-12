@@ -40,7 +40,8 @@ goalpulse/
 │   ├── api/                # API service layer
 │   │   ├── football-data.ts # Football-Data.org
 │   │   └── sports-db.ts    # TheSportsDB
-│   ├── mock-data.ts        # Demo data (used without API keys)
+│   ├── data-fetcher.ts     # Football data access — live API with automatic mock fallback
+│   ├── mock-data.ts        # Football mock data (used only if the live API fails)
 │   ├── types/index.ts      # TypeScript interfaces
 │   └── utils.ts            # Utility functions
 └── .env.local              # API keys (not committed)
@@ -56,7 +57,7 @@ npm run lint     # ESLint
 
 ## API Keys
 
-Add to `.env.local` for live data:
+Configured as Replit secrets (not committed):
 
 ```env
 # Football-Data.org (https://www.football-data.org/client/register)
@@ -66,7 +67,11 @@ FOOTBALL_DATA_API_KEY=your_key_here
 THESPORTSDB_API_KEY=3
 ```
 
-Without API keys, the site uses rich mock data and displays a notice.
+**Football** (`lib/data-fetcher.ts`) automatically falls back to realistic mock
+data (`lib/mock-data.ts`) if `FOOTBALL_DATA_API_KEY` is missing, invalid, or
+the API is rate-limited/unavailable — the UI never shows an error for this.
+Cricket, basketball, and tennis (TheSportsDB) remain live-only with no mock
+fallback.
 
 ## User Preferences
 

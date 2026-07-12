@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Calendar, ArrowRight } from "lucide-react";
 import MatchCard from "@/components/ui/MatchCard";
-import { fetchUpcomingMatches } from "@/lib/data-fetcher";
+import { fetchTodaysMatches } from "@/lib/data-fetcher";
 
 export default async function UpcomingFixtures() {
-  const fixtures = (await fetchUpcomingMatches("PL").catch(() => [])).slice(0, 4);
+  const fixtures = (await fetchTodaysMatches().catch(() => [])).slice(0, 4);
 
   return (
     <section className="py-12">

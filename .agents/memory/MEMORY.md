@@ -1,2 +1,3 @@
 - [Tailwind v4 setup](tailwind-v4-setup.md) — v4 needs `@import "tailwindcss"` + `@tailwindcss/postcss`; use `@source` directives and inline `style` for arbitrary values that won't scan.
 - [Next.js image in Replit](nextjs-image-replit.md) — Unsplash blocked in Replit sandbox; use picsum.photos for mock images and `unoptimized` prop; add all hostnames to next.config.ts remotePatterns.
+- [Football-Data.org mock fallback](football-data-mock-fallback.md) — catch API failures in the shared data layer, not per-page, to fall back to mock data invisibly.
