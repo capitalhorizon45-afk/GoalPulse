@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
   description:
-    "Get in touch with the GoalPulse team — questions, feedback, data corrections, or partnerships.",
+    "Get in touch with the sportivox team — questions, feedback, data corrections, or partnerships.",
   path: "/contact",
 });
 
@@ -17,7 +17,7 @@ const CONTACT_CARDS = [
     icon: Mail,
     color: "#00C8FF",
     title: "Email",
-    lines: ["hello@goalpulse.app"],
+    lines: ["hello@sportivox.app"],
   },
   {
     icon: Clock,

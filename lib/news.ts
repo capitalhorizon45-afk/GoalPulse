@@ -1,5 +1,5 @@
 /**
- * "News" for GoalPulse is generated from real recent results returned by
+ * "News" for sportivox is generated from real recent results returned by
  * Football-Data.org and TheSportsDB — there is no separate news/article
  * API in scope, so match reports are derived from real match data
  * instead of being invented.
@@ -83,7 +83,7 @@ async function fetchFootballNews(): Promise<NewsArticle[]> {
           imageUrl: homeScore >= awayScore ? m.homeTeam.crest : m.awayTeam.crest,
           category: "football",
           publishedAt: m.utcDate,
-          author: "GoalPulse Newsroom",
+          author: "sportivox Newsroom",
           source: "Football-Data.org",
           slug: `football-${m.id}-${slugify(`${m.homeTeam.shortName ?? m.homeTeam.name}-${m.awayTeam.shortName ?? m.awayTeam.name}`)}`,
           readTime: readTimeFor(excerpt),
@@ -133,7 +133,7 @@ async function fetchSportsDbNews(
         imageUrl: e.strThumb || e.strLeagueBadge || "",
         category,
         publishedAt,
-        author: "GoalPulse Newsroom",
+        author: "sportivox Newsroom",
         source: "TheSportsDB",
         slug: `${category}-${e.idEvent}-${slugify(awayName ? `${homeName}-${awayName}` : homeName)}`,
         readTime: readTimeFor(excerpt),
@@ -144,7 +144,7 @@ async function fetchSportsDbNews(
   }
 }
 
-/** All GoalPulse "news" — real recent match results across all four sports. */
+/** All sportivox "news" — real recent match results across all four sports. */
 export async function fetchNews(): Promise<NewsArticle[]> {
   const football = await fetchFootballNews();
   const cricket = await fetchSportsDbNews("cricket");

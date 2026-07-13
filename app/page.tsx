@@ -7,7 +7,7 @@ import SportsCategories from "@/components/sections/SportsCategories";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "GoalPulse — Live Sports Scores & News",
+  title: "sportivox — Live Sports Scores & News",
   description:
     "Your ultimate sports hub. Live scores, fixtures, standings, and breaking news for Football, Cricket, Basketball, and Tennis.",
   path: "/",

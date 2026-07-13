@@ -93,7 +93,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted">
-            © {new Date().getFullYear()} GoalPulse. All rights reserved.
+            © {new Date().getFullYear()} sportivox. All rights reserved.
           </p>
           <div className="flex items-center gap-1.5 text-xs text-muted">
             <span>Data from</span>

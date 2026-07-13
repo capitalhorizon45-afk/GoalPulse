@@ -1,7 +1,7 @@
 /**
  * Football fallback data.
  *
- * GoalPulse's football data comes from Football-Data.org (see
+ * sportivox's football data comes from Football-Data.org (see
  * `lib/api/football-data.ts`). This module provides realistic
  * placeholder data for that sport only — used exclusively by
  * `lib/data-fetcher.ts` when the live API is unavailable, unconfigured,

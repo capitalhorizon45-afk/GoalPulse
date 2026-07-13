@@ -7,28 +7,28 @@ import { buildMetadata, faqSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "FAQ",
   description:
-    "Answers to common questions about GoalPulse's live scores, data sources, coverage, and news.",
+    "Answers to common questions about sportivox's live scores, data sources, coverage, and news.",
   path: "/faq",
 });
 
 const FAQ_GROUPS: { group: string; items: { question: string; answer: string }[] }[] = [
   {
-    group: "About GoalPulse",
+    group: "About sportivox",
     items: [
       {
-        question: "What is GoalPulse?",
+        question: "What is sportivox?",
         answer:
-          "GoalPulse is a sports hub for live scores, fixtures, standings, and news across Football, Cricket, Basketball, and Tennis, built on real data from licensed sports data providers.",
+          "sportivox is a sports hub for live scores, fixtures, standings, and news across Football, Cricket, Basketball, and Tennis, built on real data from licensed sports data providers.",
       },
       {
-        question: "Is GoalPulse free to use?",
+        question: "Is sportivox free to use?",
         answer:
-          "Yes. GoalPulse is free to browse — there's no account, subscription, or paywall.",
+          "Yes. sportivox is free to browse — there's no account, subscription, or paywall.",
       },
       {
-        question: "Is GoalPulse affiliated with any league or club?",
+        question: "Is sportivox affiliated with any league or club?",
         answer:
-          "No. GoalPulse is an independent platform and is not affiliated with, endorsed by, or officially connected to any league, club, or federation. See our Disclaimer for details.",
+          "No. sportivox is an independent platform and is not affiliated with, endorsed by, or officially connected to any league, club, or federation. See our Disclaimer for details.",
       },
     ],
   },
@@ -48,17 +48,17 @@ const FAQ_GROUPS: { group: string; items: { question: string; answer: string }[]
       {
         question: "How often do scores update?",
         answer:
-          "Football data refreshes on a 60-second cache and other sports on a 120-second cache, matching what our providers make available — GoalPulse doesn't add artificial delay on top of that.",
+          "Football data refreshes on a 60-second cache and other sports on a 120-second cache, matching what our providers make available — sportivox doesn't add artificial delay on top of that.",
       },
       {
         question: "What happens if a data provider goes down?",
         answer:
-          "If Football-Data.org is temporarily unavailable, GoalPulse may show representative fallback data so the interface stays usable rather than breaking outright — this is never shown in place of real live data when the provider is healthy.",
+          "If Football-Data.org is temporarily unavailable, sportivox may show representative fallback data so the interface stays usable rather than breaking outright — this is never shown in place of real live data when the provider is healthy.",
       },
       {
-        question: "Can I use GoalPulse data for betting?",
+        question: "Can I use sportivox data for betting?",
         answer:
-          "No. GoalPulse is for informational and entertainment purposes only and should not be used as the basis for betting or wagering. See our Disclaimer for more.",
+          "No. sportivox is for informational and entertainment purposes only and should not be used as the basis for betting or wagering. See our Disclaimer for more.",
       },
     ],
   },
@@ -81,12 +81,12 @@ const FAQ_GROUPS: { group: string; items: { question: string; answer: string }[]
     group: "Account & Privacy",
     items: [
       {
-        question: "Do I need an account to use GoalPulse?",
+        question: "Do I need an account to use sportivox?",
         answer:
           "No account is required to browse scores, fixtures, standings, or news.",
       },
       {
-        question: "What information does GoalPulse collect about me?",
+        question: "What information does sportivox collect about me?",
         answer:
           "We keep data collection to a minimum — mainly whatever you send us directly through the Contact form, plus standard technical logs from our hosting provider. See our Privacy Policy for the full picture.",
       },

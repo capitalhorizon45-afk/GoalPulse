@@ -1,5 +1,5 @@
 /**
- * Static catalog describing the sports GoalPulse covers and which
+ * Static catalog describing the sports sportivox covers and which
  * competitions back each one. This is app configuration, not fetched
  * data — league counts reflect the real integrations below, and
  * `hasLiveData` reflects an actual limitation of the free API tiers

@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
 
-const CONTACT_EMAIL = "hello@goalpulse.app";
+const CONTACT_EMAIL = "hello@sportivox.app";
 
 const SUBJECTS = [
   "General question",
@@ -25,7 +25,7 @@ export default function ContactForm() {
 
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
     const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      `[GoalPulse] ${subject}`
+      `[sportivox] ${subject}`
     )}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailtoUrl;

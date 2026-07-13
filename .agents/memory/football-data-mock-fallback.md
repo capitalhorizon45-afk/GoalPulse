@@ -1,6 +1,6 @@
 ---
 name: Football-Data.org mock fallback pattern
-description: How GoalPulse (Next.js sports site) falls back from live Football-Data.org calls to mock data, and why.
+description: How sportivox (Next.js sports site) falls back from live Football-Data.org calls to mock data, and why.
 ---
 
 Live data fetchers should catch API errors at the point they're called and return mock data of the same shape, rather than letting errors propagate to `error.tsx` boundaries. This applies per-sport/per-source — only wrap the source that's expected to be flaky or optional; don't blanket-catch sources that should hard-fail.

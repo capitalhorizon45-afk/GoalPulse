@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Editorial Policy",
   description:
-    "How GoalPulse produces its match-report news, where the underlying data comes from, and how we handle corrections.",
+    "How sportivox produces its match-report news, where the underlying data comes from, and how we handle corrections.",
   path: "/editorial-policy",
 });
 
@@ -34,9 +34,9 @@ export default function EditorialPolicyPage() {
 
         {/* Content */}
         <div className="bg-surface rounded-2xl border border-border p-6 sm:p-8">
-          <LegalSection title="1. What GoalPulse News Is">
+          <LegalSection title="1. What sportivox News Is">
             <p>
-              The &ldquo;News&rdquo; section of GoalPulse consists of short
+              The &ldquo;News&rdquo; section of sportivox consists of short
               match reports generated automatically from real, recently
               completed results supplied by our data providers — not
               original reporting from journalists on the ground, press
@@ -48,7 +48,7 @@ export default function EditorialPolicyPage() {
 
           <LegalSection title="2. Why We Do It This Way">
             <p>
-              GoalPulse does not operate a newsroom of staff reporters. Being
+              sportivox does not operate a newsroom of staff reporters. Being
               upfront about that matters to us: we would rather tell you
               exactly how a report was produced than imply human journalism
               that didn&apos;t happen. Every report is grounded in a real
@@ -74,8 +74,8 @@ export default function EditorialPolicyPage() {
 
           <LegalSection title="4. Bylines">
             <p>
-              Reports are attributed to &ldquo;GoalPulse Newsroom&rdquo; to
-              reflect that they are produced by the GoalPulse platform from
+              Reports are attributed to &ldquo;sportivox Newsroom&rdquo; to
+              reflect that they are produced by the sportivox platform from
               provider data, rather than by a named individual reporter.
             </p>
           </LegalSection>
@@ -113,7 +113,7 @@ export default function EditorialPolicyPage() {
               To report an error or ask about how a specific article was
               produced, reach us via our{" "}
               <Link href="/contact">Contact page</Link> or email{" "}
-              <a href="mailto:hello@goalpulse.app">hello@goalpulse.app</a>.
+              <a href="mailto:hello@sportivox.app">hello@sportivox.app</a>.
             </p>
           </LegalSection>
         </div>

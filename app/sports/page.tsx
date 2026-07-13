@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Sports",
-  description: "Explore all sports covered on GoalPulse — Football, Cricket, Basketball, and Tennis.",
+  description: "Explore all sports covered on sportivox — Football, Cricket, Basketball, and Tennis.",
   path: "/sports",
   keywords: ["sports", "football", "cricket", "basketball", "tennis"],
 });

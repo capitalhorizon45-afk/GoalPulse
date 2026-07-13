@@ -137,7 +137,7 @@ export default async function ArticlePage({ params }: Props) {
         <div className="prose prose-invert max-w-none space-y-4 text-muted leading-relaxed">
           <p>{article.content ?? article.excerpt}</p>
           <p className="text-xs text-muted/70">
-            Source: {article.source ?? "GoalPulse"}
+            Source: {article.source ?? "sportivox"}
           </p>
         </div>
 

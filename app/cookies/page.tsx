@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Cookie Policy",
   description:
-    "Learn what cookies and local storage GoalPulse uses, and how to control them.",
+    "Learn what cookies and local storage sportivox uses, and how to control them.",
   path: "/cookies",
 });
 
@@ -28,12 +28,12 @@ const COOKIE_TABLE = [
   {
     type: "Analytics",
     used: "No",
-    purpose: "GoalPulse does not currently use third-party analytics cookies.",
+    purpose: "sportivox does not currently use third-party analytics cookies.",
   },
   {
     type: "Advertising",
     used: "No",
-    purpose: "GoalPulse does not use advertising or cross-site tracking cookies.",
+    purpose: "sportivox does not use advertising or cross-site tracking cookies.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function CookiePolicyPage() {
 
           <LegalSection title="2. Cookies We Use">
             <p>
-              GoalPulse keeps its use of cookies and local storage to a
+              sportivox keeps its use of cookies and local storage to a
               minimum:
             </p>
             <div className="overflow-x-auto -mx-1 mt-4">
@@ -106,7 +106,7 @@ export default function CookiePolicyPage() {
 
           <LegalSection title="3. Third-Party Data Requests">
             <p>
-              Live sports data shown on GoalPulse is fetched by our servers
+              Live sports data shown on sportivox is fetched by our servers
               from Football-Data.org and TheSportsDB — your browser does not
               make direct requests to these providers, so they do not set
               cookies on your device through our site.
@@ -116,7 +116,7 @@ export default function CookiePolicyPage() {
           <LegalSection title="4. Managing Cookies">
             <p>
               Most browsers let you control or delete cookies through their
-              settings. Since GoalPulse relies only on essential, functional
+              settings. Since sportivox relies only on essential, functional
               storage, blocking non-essential cookies should not affect your
               ability to use the site. You can find instructions for managing
               cookies in your browser&apos;s help documentation.
@@ -125,7 +125,7 @@ export default function CookiePolicyPage() {
 
           <LegalSection title="5. Changes to This Policy">
             <p>
-              If GoalPulse introduces analytics or advertising in the future,
+              If sportivox introduces analytics or advertising in the future,
               this Cookie Policy will be updated accordingly and the
               &ldquo;Last updated&rdquo; date above will change.
             </p>
@@ -143,7 +143,7 @@ export default function CookiePolicyPage() {
             <p>
               Questions about our use of cookies? Reach us via our{" "}
               <Link href="/contact">Contact page</Link> or email{" "}
-              <a href="mailto:privacy@goalpulse.app">privacy@goalpulse.app</a>.
+              <a href="mailto:privacy@sportivox.app">privacy@sportivox.app</a>.
             </p>
           </LegalSection>
         </div>

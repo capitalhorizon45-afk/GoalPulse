@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
   description:
-    "How GoalPulse collects, uses, and protects your information when you use our live sports platform.",
+    "How sportivox collects, uses, and protects your information when you use our live sports platform.",
   path: "/privacy",
 });
 
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
         <div className="bg-surface rounded-2xl border border-border p-6 sm:p-8">
           <LegalSection title="1. Overview">
             <p>
-              GoalPulse (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;)
+              sportivox (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;)
               provides live sports scores, fixtures, standings, and news for
               Football, Cricket, Basketball, and Tennis. This Privacy Policy
               explains what information we collect when you use our website,
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
           </LegalSection>
 
           <LegalSection title="2. Information We Collect">
-            <p>GoalPulse does not require an account to use, and we keep data collection to a minimum:</p>
+            <p>sportivox does not require an account to use, and we keep data collection to a minimum:</p>
             <ul>
               <li>
                 <strong>Contact information you provide:</strong> if you reach
@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
 
           <LegalSection title="4. Third-Party Sports Data Providers">
             <p>
-              GoalPulse displays live sports data licensed from{" "}
+              sportivox displays live sports data licensed from{" "}
               <a href="https://www.football-data.org" target="_blank" rel="noopener noreferrer">
                 Football-Data.org
               </a>{" "}
@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
 
           <LegalSection title="8. Children's Privacy">
             <p>
-              GoalPulse is not directed at children under 13, and we do not
+              sportivox is not directed at children under 13, and we do not
               knowingly collect personal information from children.
             </p>
           </LegalSection>
@@ -144,7 +144,7 @@ export default function PrivacyPolicyPage() {
             <p>
               Questions about this Privacy Policy? Reach us via our{" "}
               <Link href="/contact">Contact page</Link> or email{" "}
-              <a href="mailto:privacy@goalpulse.app">privacy@goalpulse.app</a>.
+              <a href="mailto:privacy@sportivox.app">privacy@sportivox.app</a>.
             </p>
           </LegalSection>
         </div>

@@ -4,22 +4,22 @@ import type { NewsArticle } from "@/lib/types";
 /**
  * Single source of truth for the site's canonical URL. Override with
  * NEXT_PUBLIC_SITE_URL once a real production domain is attached; falls
- * back to the GoalPulse brand domain already used across the site
+ * back to the sportivox brand domain already used across the site
  * (contact emails, footer links, etc.) in the meantime.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://goalpulse.app"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://sportivox.app"
 ).replace(/\/$/, "");
 
-export const SITE_NAME = "GoalPulse";
+export const SITE_NAME = "sportivox";
 
 export const SITE_DESCRIPTION =
   "Your ultimate sports hub. Live scores, fixtures, standings, and breaking news for Football, Cricket, Basketball, and Tennis.";
 
-export const TWITTER_HANDLE = "@goalpulse";
+export const TWITTER_HANDLE = "@sportivox";
 
 interface PageMetadataInput {
-  /** Page-specific title. The root layout appends " | GoalPulse". */
+  /** Page-specific title. The root layout appends " | sportivox". */
   title: string;
   description: string;
   /** Route path starting with "/", e.g. "/live". Use "/" for the homepage. */
@@ -65,7 +65,7 @@ export function buildMetadata({
   };
 }
 
-/** JSON-LD Organization schema — identifies GoalPulse as a publisher/brand. */
+/** JSON-LD Organization schema — identifies sportivox as a publisher/brand. */
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",

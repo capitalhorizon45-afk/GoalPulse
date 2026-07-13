@@ -15,8 +15,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "GoalPulse — Live Sports Scores & News",
-    template: "%s | GoalPulse",
+    default: "sportivox — Live Sports Scores & News",
+    template: "%s | sportivox",
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "tennis scores",
     "fixtures",
     "standings",
-    "GoalPulse",
+    "sportivox",
   ],
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: "GoalPulse — Live Sports Scores & News",
+    title: "sportivox — Live Sports Scores & News",
     description: SITE_DESCRIPTION,
     siteName: SITE_NAME,
   },
   twitter: {
     card: "summary_large_image",
-    title: "GoalPulse — Live Sports Scores & News",
+    title: "sportivox — Live Sports Scores & News",
     description: SITE_DESCRIPTION,
     creator: TWITTER_HANDLE,
   },

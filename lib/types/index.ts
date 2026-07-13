@@ -98,9 +98,9 @@ export interface Sport {
   icon: string;
   color: string;
   description: string;
-  /** Number of leagues/competitions GoalPulse integrates for this sport. */
+  /** Number of leagues/competitions sportivox integrates for this sport. */
   leagueCount: number;
-  /** Whether GoalPulse can show real live scores for this sport on the current API tier. */
+  /** Whether sportivox can show real live scores for this sport on the current API tier. */
   hasLiveData: boolean;
 }
 

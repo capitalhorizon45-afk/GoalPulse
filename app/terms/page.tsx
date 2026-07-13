@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Terms & Conditions",
   description:
-    "The terms and conditions governing your use of the GoalPulse live sports platform.",
+    "The terms and conditions governing your use of the sportivox live sports platform.",
   path: "/terms",
 });
 
@@ -36,7 +36,7 @@ export default function TermsPage() {
         <div className="bg-surface rounded-2xl border border-border p-6 sm:p-8">
           <LegalSection title="1. Acceptance of Terms">
             <p>
-              By accessing or using GoalPulse (&ldquo;the Service&rdquo;), you
+              By accessing or using sportivox (&ldquo;the Service&rdquo;), you
               agree to be bound by these Terms &amp; Conditions. If you do not
               agree, please do not use the Service.
             </p>
@@ -44,7 +44,7 @@ export default function TermsPage() {
 
           <LegalSection title="2. Description of Service">
             <p>
-              GoalPulse provides live sports scores, fixtures, standings, and
+              sportivox provides live sports scores, fixtures, standings, and
               news for Football, Cricket, Basketball, and Tennis, sourced from
               third-party data providers. The Service is provided for
               informational and entertainment purposes only.
@@ -56,10 +56,10 @@ export default function TermsPage() {
               Live scores, fixtures, standings, and statistics are supplied by
               third-party providers (including Football-Data.org and
               TheSportsDB) and may be delayed, incomplete, or occasionally
-              incorrect. If a provider is temporarily unavailable, GoalPulse
+              incorrect. If a provider is temporarily unavailable, sportivox
               may display cached or representative data so the interface
               remains usable, clearly reflecting the underlying provider
-              outage rather than presenting it as live. GoalPulse does not
+              outage rather than presenting it as live. sportivox does not
               guarantee the accuracy, completeness, or timeliness of any data
               displayed, and this data should not be relied upon for betting,
               wagering, or any purpose requiring guaranteed accuracy.
@@ -78,8 +78,8 @@ export default function TermsPage() {
 
           <LegalSection title="5. Intellectual Property">
             <p>
-              The GoalPulse name, logo, design, and original content are the
-              property of GoalPulse. Sports data, team names, and crests
+              The sportivox name, logo, design, and original content are the
+              property of sportivox. Sports data, team names, and crests
               remain the property of their respective leagues, clubs, and
               data providers.
             </p>
@@ -97,7 +97,7 @@ export default function TermsPage() {
             <p>
               The Service is provided &ldquo;as is&rdquo; without warranties
               of any kind, express or implied. To the fullest extent
-              permitted by law, GoalPulse shall not be liable for any
+              permitted by law, sportivox shall not be liable for any
               indirect, incidental, or consequential damages arising from your
               use of, or inability to use, the Service.
             </p>
@@ -124,7 +124,7 @@ export default function TermsPage() {
             <p>
               Questions about these Terms? Reach us via our{" "}
               <Link href="/contact">Contact page</Link> or email{" "}
-              <a href="mailto:legal@goalpulse.app">legal@goalpulse.app</a>.
+              <a href="mailto:legal@sportivox.app">legal@sportivox.app</a>.
             </p>
           </LegalSection>
         </div>

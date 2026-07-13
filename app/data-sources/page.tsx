@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Data Sources",
   description:
-    "Where GoalPulse's football, cricket, basketball, and tennis data comes from — Football-Data.org and TheSportsDB — and what each one covers.",
+    "Where sportivox's football, cricket, basketball, and tennis data comes from — Football-Data.org and TheSportsDB — and what each one covers.",
   path: "/data-sources",
 });
 
@@ -31,7 +31,7 @@ const PROVIDERS = [
     ],
     liveData: true,
     notes:
-      "If Football-Data.org is temporarily unavailable, GoalPulse falls back to clearly-scoped representative data so pages stay usable rather than showing a broken screen — this never happens silently in place of real live data when the API is healthy.",
+      "If Football-Data.org is temporarily unavailable, sportivox falls back to clearly-scoped representative data so pages stay usable rather than showing a broken screen — this never happens silently in place of real live data when the API is healthy.",
   },
   {
     name: "TheSportsDB",
@@ -70,7 +70,7 @@ export default function DataSourcesPage() {
             <span className="text-gradient-primary">data comes from</span>
           </h1>
           <p className="text-lg text-muted leading-relaxed">
-            GoalPulse displays real data licensed from two providers — no
+            sportivox displays real data licensed from two providers — no
             invented scores, fixtures, or stats. Here&apos;s exactly what
             each one supplies.
           </p>

@@ -1,4 +1,4 @@
-# GoalPulse
+# sportivox
 
 A production-ready sports website delivering live scores, fixtures, standings, and news for Football, Cricket, Basketball, and Tennis.
 
@@ -22,7 +22,7 @@ Premium dark UI with the following color system:
 ## Project Structure
 
 ```
-goalpulse/
+sportivox/
 ├── app/                    # Next.js App Router pages
 │   ├── layout.tsx          # Root layout (Navbar + Footer)
 │   ├── page.tsx            # Home page

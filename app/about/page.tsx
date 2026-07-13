@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "About",
-  description: "Learn about GoalPulse — your real-time sports hub for scores, fixtures, standings, and news.",
+  description: "Learn about sportivox — your real-time sports hub for scores, fixtures, standings, and news.",
   path: "/about",
 });
 
@@ -84,14 +84,14 @@ export default function AboutPage() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 badge-primary mb-6">
             <Zap className="w-3.5 h-3.5" />
-            About GoalPulse
+            About sportivox
           </div>
           <h1 className="text-4xl sm:text-5xl font-black text-white mb-5 leading-tight">
             Your pulse on{" "}
             <span className="text-gradient-primary">live sports</span>
           </h1>
           <p className="text-lg text-muted leading-relaxed">
-            GoalPulse is a production-ready sports platform delivering real-time
+            sportivox is a production-ready sports platform delivering real-time
             scores, fixtures, standings, and news for Football, Cricket, Basketball,
             and Tennis — all in a premium, fast, and responsive interface.
           </p>
@@ -178,7 +178,7 @@ export default function AboutPage() {
             🔑 Live Data Sources
           </h2>
           <p className="text-muted text-sm leading-relaxed mb-4">
-            GoalPulse is connected to two live APIs — no mock or placeholder
+            sportivox is connected to two live APIs — no mock or placeholder
             data. Keys are stored securely as Replit Secrets, not in the codebase.
           </p>
           <div className="space-y-3">

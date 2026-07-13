@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Disclaimer",
   description:
-    "Important information about the accuracy, independence, and intended use of the sports data and content on GoalPulse.",
+    "Important information about the accuracy, independence, and intended use of the sports data and content on sportivox.",
   path: "/disclaimer",
 });
 
@@ -36,7 +36,7 @@ export default function DisclaimerPage() {
         <div className="bg-surface rounded-2xl border border-border p-6 sm:p-8">
           <LegalSection title="1. Informational Purposes Only">
             <p>
-              GoalPulse provides live scores, fixtures, standings, and
+              sportivox provides live scores, fixtures, standings, and
               match-report news for entertainment and informational purposes
               only. Nothing on this site constitutes professional, betting,
               financial, or legal advice, and content should not be relied
@@ -47,10 +47,10 @@ export default function DisclaimerPage() {
 
           <LegalSection title="2. No Betting or Wagering Use">
             <p>
-              GoalPulse is not a betting platform and does not encourage
+              sportivox is not a betting platform and does not encourage
               gambling. Scores, statistics, and odds-adjacent figures (such as
               form or goal difference) can be delayed, incomplete, or
-              incorrect. Do not use GoalPulse data as the basis for placing
+              incorrect. Do not use sportivox data as the basis for placing
               bets or wagers of any kind.
             </p>
           </LegalSection>
@@ -77,7 +77,7 @@ export default function DisclaimerPage() {
 
           <LegalSection title="4. No Affiliation">
             <p>
-              GoalPulse is an independent platform and is not affiliated
+              sportivox is an independent platform and is not affiliated
               with, endorsed by, or officially connected to any football
               league, club, federation, or governing body (including the
               Premier League, La Liga, Bundesliga, Serie A, or Ligue 1),
@@ -90,7 +90,7 @@ export default function DisclaimerPage() {
 
           <LegalSection title="5. External Links">
             <p>
-              GoalPulse links to third-party websites, including our data
+              sportivox links to third-party websites, including our data
               providers and social platforms. We do not control and are not
               responsible for the content, accuracy, or availability of any
               external site.
@@ -100,7 +100,7 @@ export default function DisclaimerPage() {
           <LegalSection title="6. No Warranty">
             <p>
               The Service is provided &ldquo;as is&rdquo; without warranties
-              of any kind. To the fullest extent permitted by law, GoalPulse
+              of any kind. To the fullest extent permitted by law, sportivox
               disclaims all warranties, express or implied, regarding the
               accuracy, reliability, or availability of the site or its
               content. See our{" "}
@@ -121,7 +121,7 @@ export default function DisclaimerPage() {
             <p>
               Questions about this Disclaimer? Reach us via our{" "}
               <Link href="/contact">Contact page</Link> or email{" "}
-              <a href="mailto:hello@goalpulse.app">hello@goalpulse.app</a>.
+              <a href="mailto:hello@sportivox.app">hello@sportivox.app</a>.
             </p>
           </LegalSection>
         </div>

@@ -1,5 +1,5 @@
 /**
- * Server-side data access for GoalPulse.
+ * Server-side data access for sportivox.
  *
  * Football data is read from the live Football-Data.org API
  * (`FOOTBALL_DATA_API_KEY`). If that API is unavailable — unconfigured,
