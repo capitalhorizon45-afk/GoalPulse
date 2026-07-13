@@ -4,11 +4,14 @@ import SportCard from "@/components/ui/SportCard";
 import MatchCard from "@/components/ui/MatchCard";
 import { SPORTS_CATALOG } from "@/lib/sports-catalog";
 import { fetchLiveMatches, fetchUpcomingMatches } from "@/lib/data-fetcher";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Sports",
   description: "Explore all sports covered on GoalPulse — Football, Cricket, Basketball, and Tennis.",
-};
+  path: "/sports",
+  keywords: ["sports", "football", "cricket", "basketball", "tennis"],
+});
 
 // Pulls live match data from a third-party API — render per-request.
 export const dynamic = "force-dynamic";

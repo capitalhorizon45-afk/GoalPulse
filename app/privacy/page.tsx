@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield } from "lucide-react";
 import LegalSection from "@/components/ui/LegalSection";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
   description:
     "How GoalPulse collects, uses, and protects your information when you use our live sports platform.",
-};
+  path: "/privacy",
+});
 
 const LAST_UPDATED = "July 12, 2026";
 

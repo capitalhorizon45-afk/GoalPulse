@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import StructuredData from "@/components/seo/StructuredData";
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, TWITTER_HANDLE } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,15 +13,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://goalpulse.vercel.app"
-  ),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "GoalPulse — Live Sports Scores & News",
     template: "%s | GoalPulse",
   },
-  description:
-    "Your ultimate sports hub. Live scores, fixtures, standings, and breaking news for Football, Cricket, Basketball, and Tennis.",
+  description: SITE_DESCRIPTION,
   keywords: [
     "live scores",
     "sports news",
@@ -31,23 +30,27 @@ export const metadata: Metadata = {
     "standings",
     "GoalPulse",
   ],
-  authors: [{ name: "GoalPulse" }],
-  creator: "GoalPulse",
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  alternates: {
+    canonical: "/",
+  },
+  verification: {
+    google: "DKgMxztn4jEpSG821ZXrCcOox_bTb3bIx8HcXoHpM_E",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://goalpulse.app",
+    url: SITE_URL,
     title: "GoalPulse — Live Sports Scores & News",
-    description:
-      "Your ultimate sports hub. Live scores, fixtures, standings, and breaking news.",
-    siteName: "GoalPulse",
+    description: SITE_DESCRIPTION,
+    siteName: SITE_NAME,
   },
   twitter: {
     card: "summary_large_image",
     title: "GoalPulse — Live Sports Scores & News",
-    description:
-      "Your ultimate sports hub. Live scores, fixtures, standings, and breaking news.",
-    creator: "@goalpulse",
+    description: SITE_DESCRIPTION,
+    creator: TWITTER_HANDLE,
   },
   robots: {
     index: true,
@@ -70,6 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="min-h-screen flex flex-col bg-background text-white antialiased">
+        <StructuredData />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

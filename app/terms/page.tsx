@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Scale } from "lucide-react";
 import LegalSection from "@/components/ui/LegalSection";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Terms & Conditions",
   description:
     "The terms and conditions governing your use of the GoalPulse live sports platform.",
-};
+  path: "/terms",
+});
 
 const LAST_UPDATED = "July 12, 2026";
 

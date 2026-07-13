@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { Radio } from "lucide-react";
 import MatchCard from "@/components/ui/MatchCard";
 import { fetchLiveMatches } from "@/lib/data-fetcher";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Live Scores",
   description: "Real-time live scores for Football, Cricket, Basketball and Tennis.",
-};
+  path: "/live",
+  keywords: ["live scores", "live football scores", "live cricket scores"],
+});
 
 // Live data changes constantly and comes from a third-party API — render
 // per-request rather than baking a snapshot into the build.

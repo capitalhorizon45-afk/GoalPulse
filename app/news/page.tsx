@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { Newspaper } from "lucide-react";
 import NewsCard from "@/components/ui/NewsCard";
 import { fetchNews } from "@/lib/news";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "News",
   description: "Latest sports news, match reports, and analysis from Football, Cricket, Basketball, and Tennis.",
-};
+  path: "/news",
+  keywords: ["sports news", "match reports", "sports analysis"],
+});
 
 // News is derived from live match results across two third-party APIs —
 // render per-request rather than baking a snapshot into the build.

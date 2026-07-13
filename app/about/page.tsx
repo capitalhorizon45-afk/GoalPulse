@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Zap, Radio, BarChart2, Newspaper, Globe, Code2, ArrowRight } from "lucide-react";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "About",
   description: "Learn about GoalPulse — your real-time sports hub for scores, fixtures, standings, and news.",
-};
+  path: "/about",
+});
 
 const FEATURES = [
   {

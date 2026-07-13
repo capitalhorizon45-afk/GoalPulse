@@ -3,11 +3,14 @@ import { Calendar } from "lucide-react";
 import MatchCard from "@/components/ui/MatchCard";
 import { fetchUpcomingMatches } from "@/lib/data-fetcher";
 import { formatMatchDate } from "@/lib/utils";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Fixtures",
   description: "Upcoming fixtures and match schedules for all major sports and leagues.",
-};
+  path: "/fixtures",
+  keywords: ["fixtures", "match schedule", "upcoming matches"],
+});
 
 // Fixture schedules come from a live third-party API — render per-request
 // rather than baking a snapshot into the build.

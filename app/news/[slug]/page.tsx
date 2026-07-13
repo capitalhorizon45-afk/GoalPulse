@@ -6,6 +6,7 @@ import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 import { fetchNews } from "@/lib/news";
 import { formatRelativeTime } from "@/lib/utils";
 import NewsCard from "@/components/ui/NewsCard";
+import { SITE_NAME, SITE_URL, TWITTER_HANDLE, articleSchema } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -16,9 +17,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const news = await fetchNews();
   const article = news.find((a) => a.slug === slug);
   if (!article) return { title: "Article not found" };
+
+  const path = `/news/${slug}`;
+
   return {
     title: article.title,
     description: article.excerpt,
+    alternates: { canonical: path },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url: `${SITE_URL}${path}`,
+      siteName: SITE_NAME,
+      type: "article",
+      publishedTime: article.publishedAt,
+      ...(article.author ? { authors: [article.author] } : {}),
+      ...(article.imageUrl ? { images: [{ url: article.imageUrl }] } : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      creator: TWITTER_HANDLE,
+      ...(article.imageUrl ? { images: [article.imageUrl] } : {}),
+    },
   };
 }
 
@@ -39,6 +61,12 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <div className="pt-24 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema(article, `/news/${slug}`)),
+        }}
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back */}
         <Link

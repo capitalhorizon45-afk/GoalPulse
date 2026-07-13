@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Mail, MessageSquare, Clock, MapPin } from "lucide-react";
 import ContactForm from "@/components/sections/ContactForm";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Contact",
   description:
     "Get in touch with the GoalPulse team — questions, feedback, partnerships, or support.",
-};
+  path: "/contact",
+});
 
 const CONTACT_CARDS = [
   {

@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Cookie } from "lucide-react";
 import LegalSection from "@/components/ui/LegalSection";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Cookie Policy",
   description:
     "Learn what cookies and local storage GoalPulse uses, and how to control them.",
-};
+  path: "/cookies",
+});
 
 const LAST_UPDATED = "July 12, 2026";
 

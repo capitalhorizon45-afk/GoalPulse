@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { BarChart2, TrendingUp, TrendingDown, Minus } from "lucide-react";
 import { fetchStandings } from "@/lib/data-fetcher";
 import { cn } from "@/lib/utils";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Standings",
   description: "League tables and standings for Premier League, La Liga, Bundesliga, Serie A, and more.",
-};
+  path: "/standings",
+  keywords: ["league table", "standings", "Premier League table"],
+});
 
 // Standings depend on a live third-party API — render per-request so a
 // transient upstream failure surfaces as a normal request-time error
